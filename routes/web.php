@@ -18,7 +18,6 @@ use Illuminate\support\Facades\Storage;
 use App\Http\Controllers\MainController as MainController;
 use App\Http\Controllers\TechnologyController as TechnologyController;
 
-use App\Http\Controllers\Api\UserController as UserController;
 
 
 
@@ -37,7 +36,7 @@ Route::post('/update-project/{id}', [MainController::class, 'update'])->name('up
 
 Route::put('/update-project/{id}', [MainController::class, 'store'])->name('update-project');
 
-Route::get('/', [UserController::class, 'index'])->name('home');
+
 
 // Route::get('/show/{id}',[MainController::class, 'show'])->middleware(['auth', 'verified'])->name('show');
 // Route::middleware('auth')->group(function () {
