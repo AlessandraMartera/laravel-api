@@ -16,7 +16,7 @@ use App\Http\Controllers\Api\UserController as UserController;
 |
 */
 
-Route::get('/', [UserController::class, 'index'])->name('home');
+Route::get('/project-api', [UserController::class, 'index'])->name('project-api');
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
