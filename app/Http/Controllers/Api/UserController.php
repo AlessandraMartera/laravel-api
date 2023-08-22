@@ -16,4 +16,10 @@ class UserController extends Controller
             'result' => $projects
         ]);
     }
+    public function show($id){
+        $projects = Project :: findOrFail($id);
+        return response()->json([
+            'result' => $projects
+        ]);
+    }
 }
