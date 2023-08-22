@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Project;
-// use App\Models\Technology;
+use App\Models\Technology;
 
 class UserController extends Controller
 {
@@ -20,6 +20,12 @@ class UserController extends Controller
         $projects = Project :: findOrFail($id);
         return response()->json([
             'result' => $projects
+        ]);
+    }
+    public function tecIndex(){
+        $technologies = Technology :: all();
+        return response()->json([
+            'result' => $technologies
         ]);
     }
 }
