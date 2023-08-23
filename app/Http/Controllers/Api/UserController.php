@@ -17,7 +17,7 @@ class UserController extends Controller
         ]);
     }
     public function show($id){
-        $projects = Project :: findOrFail($id);
+        $projects = Project :: with('technologies', 'type')->findOrFail($id);
         return response()->json([
             'result' => $projects
         ]);
